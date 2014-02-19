@@ -12,8 +12,8 @@
 		"url": "git@github.com:DBozhinovski/prismatic.git"
 	},
 	"dependencies": {
-		"lodash": "*",
-		"commander": "*",
+		"lodash": "2.4.1",
+		"commander": "2.1",
 		"q": "0.9"
 
 	}
