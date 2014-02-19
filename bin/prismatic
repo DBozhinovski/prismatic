@@ -1,0 +1,74 @@
+#!/usr/bin/env coffee
+
+## A CLI interface for the prismatic lib
+## Created for testing purposes, use ffmpeg directly if you need a CLI interpreter for transcoding!
+
+program = require "commander"
+{Plumbing, Porcelain, Formatter} = require "../dist/libprismatic"
+Q = require "q"
+
+## expose to CLI
+program
+  .option('-d, --do [task]', 'The task to do [mp4]', 'mp4')
+  .option('-i, --input [input]', 'Input path')
+  .option('-a --audio_codec [audio_codec]', 'Audio codec')
+  .option('-v --video_codec [video_codec', 'Video codec')
+  .option('-o, --output [output]', 'Output path')
+  .option('-r, --resolution [resolution]', 'Resolution', '1024x768')
+  .option('-t, --time [time]', 'Time', '120')
+  .parse process.argv
+
+switch program.do
+  when 'meta'
+    # the most important info is contained within .format, but get the full description just in case
+    Porcelain.info(program.input).then (out) -> console.log JSON.parse(out)
+  when 'manual'
+    Porcelain
+    .info(program.input)
+    .catch(console.log)
+    .then(JSON.parse)
+    .then((info) -> info.format)
+    .then (format) ->
+      Porcelain
+      .manual("-i #{program.input} -acodec #{program.audio_codec} -vcodec #{program.video_codec} #{program.output}")
+      .catch(console.log)
+      .progress((out) ->
+        process.stdout.write "#{Formatter.calculatePercentage(Formatter.returnProgress(out).time, format.duration)} % \r"
+      )
+      .done()
+
+  when 'mp4'
+    Porcelain
+    .info(program.input)
+    .catch((out) -> console.log out)
+    .then(JSON.parse)
+    .then((info) -> info.format)
+    .then (format) ->
+      Porcelain
+      .getMp4(program.input, program.output)
+      .progress((out)->
+        process.stdout.write "#{Formatter.calculatePercentage(Formatter.returnProgress(out).time_mark, format.duration)} % \r"
+      )
+      .catch(console.log)
+      .done()
+
+  when 'webm'
+    # maybe a combinator, since it is repetitive?
+    Porcelain
+    .info(program.input)
+    .then(JSON.parse)
+    .then((info) -> info.format)
+    .then (format) ->
+      console.log format
+      console.log "\n\n"
+      Porcelain
+      .getWebM(program.input, program.output)
+      .progress((out)->
+        process.stdout.write "#{Formatter.calculatePercentage(Formatter.returnProgress(out).time_mark, format.duration)} % \r"
+      )
+      .catch(console.log)
+      .done()
+  when 'thumbnail', 'th'
+    Porcelain.getPreviewImage(program.input, program.output, program.time, program.resolution).then -> console.log "done"
+  else
+    console.log "Unknown command. Type -h / --help for a list of commands."

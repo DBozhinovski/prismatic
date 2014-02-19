@@ -1,0 +1,201 @@
+<div style="background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif; font-size: 0.9em; overflow-x: hidden; overflow-y: auto; margin: 0px !important; padding: 5px 20px 26px !important;padding: 20px;padding: 20px; color: rgb(34, 34, 34); font-size: 15px; font-family: 'Roboto Condensed', Tauri, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', AppleSDGothicNeo-Medium, 'Segoe UI', 'Malgun Gothic', Verdana, Tahoma, sans-serif; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial;">
+  <p style="undefined; margin: 0px !important;margin: 1em 0px; word-wrap: break-word;"></p><ul style="display: inline-block;">
+<h5 style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;margin-top: 0px;">Table of Contents</h5>
+<li style="display: list-item; line-height: 1.4em;"><ul>
+<li style="display: list-item; line-height: 1.4em;"><ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#command-line" title="Command line" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Command line</a>
+</span>
+<!--span class="number">
+0
+</span-->
+<ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#examples" title="Examples" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Examples</a>
+</span>
+<!--span class="number">
+1
+</span-->
+<ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#convert-to-mp4-h264-aac" title="Convert to mp4 / h264 / aac" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Convert to mp4 / h264 / aac</a>
+</span>
+<!--span class="number">
+2
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#convert-to-webm-libvpx-libtheora" title="Convert to webm / libvpx / libtheora" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Convert to webm / libvpx / libtheora</a>
+</span>
+<!--span class="number">
+3
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#get-metadata" title="Get metadata" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Get metadata</a>
+</span>
+<!--span class="number">
+4
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#get-a-thumbnail" title="Get a thumbnail" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Get a thumbnail</a>
+</span>
+<!--span class="number">
+5
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#manual-mode" title="Manual mode" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Manual mode</a>
+</span>
+<!--span class="number">
+6
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#library" title="Library" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Library</a>
+</span>
+<!--span class="number">
+7
+</span-->
+<ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#plumbing" title="Plumbing" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Plumbing</a>
+</span>
+<!--span class="number">
+8
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#porcelain" title="Porcelain" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Porcelain</a>
+</span>
+<!--span class="number">
+9
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#formatter" title="Formatter" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Formatter</a>
+</span>
+<!--span class="number">
+10
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#examples-1" title="Examples" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Examples</a>
+</span>
+<!--span class="number">
+11
+</span-->
+<ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#get-info-and-transcode-to-mp4-taken-from-executable-" title="Get info and transcode to mp4 (taken from executable)" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">Get info and transcode to mp4 (taken from executable)</a>
+</span>
+<!--span class="number">
+12
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+<p style="margin: 1em 0px; word-wrap: break-word;"></p><h3 id="command-line" style="clear: both;font-size: 1.6em; font-weight: bold; margin: 1.125em 0px 0.75em;"><a name="command-line" href="#command-line" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Command line</h3><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -h
+
+Usage: prismatic [options]
+
+Options:
+
+-h, --help                      output usage information
+-d, --do [task]                 The task to do [mp4]
+-i, --input [input]             Input path
+-a --audio_codec [audio_codec]  Audio codec
+-v --video_codec [video_codec]   Video codec
+-o, --output [output]           Output path
+-r, --resolution [resolution]   Resolution
+-t, --time [time]               Time
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -h
+
+Usage: prismatic [options]
+
+Options:
+
+-h, --help                      output usage information
+-d, --do [task]                 The task to do [mp4]
+-i, --input [input]             Input path
+-a --audio_codec [audio_codec]  Audio codec
+-v --video_codec [video_codec]   Video codec
+-o, --output [output]           Output path
+-r, --resolution [resolution]   Resolution
+-t, --time [time]               Time
+</code></pre><p style="margin: 1em 0px; word-wrap: break-word;"><em class="underline" style="font-style: normal; text-decoration: underline;">NOTE:</em> The CLI utility part of prismatic was created for testing purposes only. If you need a straight-to-command-line utility, use FFMPEG directly instead.</p><h4 id="examples" style="clear: both;font-size: 1.4em; font-weight: bold; margin: 0.99em 0px 0.66em;"><a name="examples" href="#examples" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Examples</h4><h5 id="convert-to-mp4-h264-aac" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="convert-to-mp4-h264-aac" href="#convert-to-mp4-h264-aac" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Convert to mp4 / h264 / aac</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -d mp4 -i {input_path} -o {output_path}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -d mp4 -i {input_path} -o {output_path}
+</code></pre><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;">-d mp4 is optional, since it’s default</li>
+</ul><h5 id="convert-to-webm-libvpx-libtheora" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="convert-to-webm-libvpx-libtheora" href="#convert-to-webm-libvpx-libtheora" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Convert to webm / libvpx / libtheora</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -d webm -i {input_path} -o {output_path}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -d webm -i {input_path} -o {output_path}
+</code></pre><h5 id="get-metadata" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="get-metadata" href="#get-metadata" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Get metadata</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -d meta -i {input_path}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -d meta -i {input_path}
+</code></pre><h5 id="get-a-thumbnail" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="get-a-thumbnail" href="#get-a-thumbnail" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Get a thumbnail</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -d thumbnail -i {input_path} -t {time} -r {resolution} -o {output_path}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -d thumbnail -i {input_path} -t {time} -r {resolution} -o {output_path}
+</code></pre><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;">time is in seconds and defaults to 120</li>
+<li style="display: list-item; line-height: 1.4em;">resolution defaults to 1024x768</li>
+</ul><h5 id="manual-mode" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="manual-mode" href="#manual-mode" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Manual mode</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;./prismatic -d manual {mix_and_match_available_options}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">./prismatic -d manual {mix_and_match_available_options}
+</code></pre><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;">Warning: the manual mode usually doesn’t work. As mentioned, it was used for testing purposes only.</li>
+</ul><h3 id="library" style="clear: both;font-size: 1.6em; font-weight: bold; margin: 1.125em 0px 0.75em;"><a name="library" href="#library" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Library</h3><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">The whole library is consisted of 3 classes - Plumbing, Porcelain and Formatter. (Names obviously inspired by git :) )</p><h4 id="plumbing" style="clear: both;font-size: 1.4em; font-weight: bold; margin: 0.99em 0px 0.66em;"><a name="plumbing" href="#plumbing" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Plumbing</h4><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">Low level wrapper for ffmpeg. When instantiated via the <code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@get</code> method, it return an object with two functions - <code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">instance</code> and <code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">meta</code>.</p><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">instance</code> spawns a child_process with ffmpeg, binds a Q promise to it and returns that promise.<ul>
+<li style="display: list-item; line-height: 1.4em;">It reports data on stderr output (since ffmpeg logs output to stderr) and resolves the promise when the stream closes.</li>
+</ul>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">meta</code> returns metadata for the given path (via exec and ffprobe)</li>
+</ul><h4 id="porcelain" style="clear: both;font-size: 1.4em; font-weight: bold; margin: 0.99em 0px 0.66em;"><a name="porcelain" href="#porcelain" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Porcelain</h4><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">“Higher” lever wrapper over plumbing, that formats input via the Formatter class. Methods include:</p><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@getPreviewImage</code> - test method, used for the CLI utility. Gets thumbnails.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@getWebM</code> - test method, transcodes a video to webm.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@getMp4</code> - test method, transcodes a video to mp4.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@manual</code> - the method used by the previous 3. It uses the <code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">instance</code> method from Plumbing to spawn an instance, and passes input previously processed by the Formatter class, in order to ensure that the input is sane.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@info</code> - returns metadata. Redundant, and scheduled for change in the next version.</li>
+</ul><h4 id="formatter" style="clear: both;font-size: 1.4em; font-weight: bold; margin: 0.99em 0px 0.66em;"><a name="formatter" href="#formatter" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Formatter</h4><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">As the name implies, a formatting utility class. Methods include:</p><ul style="display: inline-block;">
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@input</code> - Formats input from various forms into an array, suitable for <code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">child_process.spawn</code></li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@formatFromStdOut</code> - parses stdout (in this case stderr) data from ffmpeg, and returns a json from the output. The second argument is a callback of sorts, or the function that the formatted output is passed to.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@streamToStdOut</code> - Logs data to stdout with all the changing attributes obtained from ffmpeg.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@returnProgress</code> - formats from stdout, calculates time and does some sanity checks to avoid NaN.</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@printToStdOut</code> - raw output console.log, used for debugging</li>
+<li style="display: list-item; line-height: 1.4em;"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;color: rgb(0, 0, 0); background-color: rgb(254, 236, 221); border: 1px solid rgb(239, 223, 208);">@calculatePercentage</code> - calculates progress via given current time and target time.</li>
+</ul><h4 id="examples" style="clear: both;font-size: 1.4em; font-weight: bold; margin: 0.99em 0px 0.66em;"><a name="examples" href="#examples" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Examples</h4><h5 id="get-info-and-transcode-to-mp4-taken-from-executable-" style="clear: both;font-size: 1.2em; font-weight: bold; margin: 0.855em 0px 0.57em;"><a name="get-info-and-transcode-to-mp4-taken-from-executable-" href="#get-info-and-transcode-to-mp4-taken-from-executable-" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Get info and transcode to mp4 (taken from executable)</h5><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt;Porcelain
+.info(program.input) # get info from input
+.catch(console.log) # log error if error
+.then(JSON.parse) # parse output to json if everything is ok
+.then((info) -&amp;gt; info.format) # return .format from parse info
+.then (format) -&amp;gt;
+  Porcelain
+  .manual(&quot;-i #{program.input} -acodec #{program.audio_codec} -vcodec #{program.video_codec} #{program.output}&quot;) # create a manual instance
+  .catch(console.log) # log error if error
+  .progress((out) -&amp;gt; 
+    process.stdout.write &quot;#{Formatter.calculatePercentage(Formatter.returnProgress(out).time, format.duration)} % \r&quot; # log progress to stdout, in percents
+  )
+  .done() # don nothing on done :)
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; letter-spacing: -1px; font-weight: bold;">Porcelain
+.info(program.input) # get info from input
+.catch(console.log) # log error if error
+.then(JSON.parse) # parse output to json if everything is ok
+.then((info) -&gt; info.format) # return .format from parse info
+.then (format) -&gt;
+  Porcelain
+  .manual("-i #{program.input} -acodec #{program.audio_codec} -vcodec #{program.video_codec} #{program.output}") # create a manual instance
+  .catch(console.log) # log error if error
+  .progress((out) -&gt; 
+    process.stdout.write "#{Formatter.calculatePercentage(Formatter.returnProgress(out).time, format.duration)} % \r" # log progress to stdout, in percents
+  )
+  .done() # don nothing on done :)
+</code></pre></div>
