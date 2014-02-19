@@ -10,7 +10,7 @@
 Prismatic can be used:
 
 1. As a command line utility (for testing purposes only): Clone the repository, install packages via NPM and use the prismatic executable located in /bin
-2. As a library: Clone the repository, install packages via NPM and build the package via `npm build`. Install the produced .tgz via `npm install {path}` anywhere needed. Installing via npm coming soon. 
+2. As a library: Install via NPM -OR- Clone the repository, install packages via NPM and build the package via `npm build`. Install the produced .tgz via `npm install {path}` anywhere needed.
 
 Usage [examples](https://github.com/DBozhinovski/prismatic/wiki/examples)
 
