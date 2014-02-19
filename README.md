@@ -12,7 +12,7 @@ Prismatic can be used:
 1. As a command line utility (for testing purposes only): Clone the repository, install packages via NPM and use the prismatic executable located in /bin
 2. As a library: Clone the repository, install packages via NPM and build the package via `npm build`. Install the produced .tgz via `npm install {path}` anywhere needed. Installing via npm coming soon. 
 
-Usage [examples](wiki/examples)
+Usage [[examples|examples]]
 
 ### Requirements
 * A recent version of ffmpeg
