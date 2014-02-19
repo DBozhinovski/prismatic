@@ -1,5 +1,5 @@
 {
-	"author": "Darko Bozhinovski <db@medialab.io>",
+	"author": "Darko Bozhinovski <dbozhinovski@gmail.com>",
 	"name": "prismatic",
 	"version": "0.4.0",
 	"description": "A wrapper for FFMPEG",
