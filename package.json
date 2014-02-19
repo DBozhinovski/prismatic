@@ -2,7 +2,7 @@
 	"author": "Darko Bozhinovski <dbozhinovski@gmail.com>",
 	"name": "prismatic",
 	"version": "0.4.0",
-	"description": "A wrapper for FFMPEG",
+	"description": "A promise-based wrapper for FFMPEG",
 	"main": "./dist/libprismatic.js",
 	"bin": {
 		"prismatic": "./bin/prismatic"

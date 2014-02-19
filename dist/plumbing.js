@@ -28,11 +28,12 @@
               return fs.writeFile('dummy.sh', "ffmpeg " + (options.filter(function(n) {
                 return n;
               }).join(' ')), function(error) {
-                _this.ff = spawn("sh", ["dummy.sh"]);
-                _this.ff.stderr.on("data", function(out) {
+                var ff;
+                ff = spawn("sh", ["dummy.sh"]);
+                ff.stderr.on("data", function(out) {
                   return deferred.notify(out);
                 });
-                return _this.ff.stdout.on("close", function(out) {
+                return ff.stdout.on("close", function(out) {
                   return deferred.resolve(out);
                 });
               });
