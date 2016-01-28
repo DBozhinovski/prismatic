@@ -1,3 +1,7 @@
+# Package deprecated.
+
+Since the package is no longer used, I released the NPM name. Use https://github.com/fluent-ffmpeg/node-fluent-ffmpeg, since it's leaps and bounds better than what's here :)
+
 ## Prismatic
 #### *A node js wrapper for ffmpeg*
 
